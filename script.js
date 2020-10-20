@@ -14,8 +14,10 @@ var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 // Could put the above into one object, rather than in an array
 
 //Store variables as you are prompting the user for information.
-// Password length var
 
+function generatePassword {
+// Password length var
+  const passwordLength = prompt("How many characters would you like your password to have?")
 // Confirm user number
 
 // Confrim use lowercase letters
@@ -23,6 +25,8 @@ var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 // Confirm use uppercase letters
 
 // Confirm use special characters
+
+}
 
 // Write password to the #password input
 function writePassword() {
