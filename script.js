@@ -35,6 +35,12 @@ if (!(passworkdLength >=8 && passwordLEngth <= 128)) {
 
 }
 
+// DECLARE a new `password` string
+var password = ""
+//WHILE passowrd.length < passwordLength
+while( password.Length < passworkdLEngth ) {}
+
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
