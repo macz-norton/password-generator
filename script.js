@@ -1,7 +1,4 @@
-// // CONFIRM if the passworkd genereator `isUsingNumbers`
-// // CONFIRM if the password genreator `isUsingLowercaseLetters`
-// // CONFIRM if the password generator `isUsingUppercase Letters`
-// // CONFIRM if the password generator `isUsingSpecialCharactersLetters`
+
 
 // // DECLARE a new `password` string
 // var password = ""
@@ -48,6 +45,8 @@ var specialCharacters = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", 
 console.log(specialCharacters);
 
 // STORE variables as you are prompting the user for information.
+var charactersToUse = [];
+
 var password = "";
 console.log(password);
 
@@ -74,45 +73,35 @@ function generatePassword() {
   // EXIT function
   return;
   }
+  // CONFIRM if the password generator `includesNumbers`
+  const includesNumbers = confirm("Do you want to include numbers? If yes, click 'Okay.'");
+  console.log(includesNumbers);
 
-  const includeNumbers = confirm("Do you want to include numbers? If yes, click 'Okay.'");
-  console.log(includeNumbers);
+  if (includesNumbers == true) {
+    charactersToUse.concat(numbers);
+  }
+  // CONFIRM if the password generator `includesLowercase`
+  const includesLowercase = confirm("Do you want to include lowercase characters? If yes, click 'Okay.'");
+  console.log(includesLowercase);
 
-  if (includeNumbers == true) {
-    password.concat(numbers);
+  if (includesLowercase == true) {
+    charactersToUse.concat(lowercaseLetters);
   }
 
-  else {
-    return;
+  // CONFIRM if the password generator `includesUppercase`
+  const includesUppercase = confirm("Do you want to include uppercase characters? If yes, click 'Okay.'");
+  console.log(includesUppercase);
+
+  if (includesUppercase == true) {
+    charactersToUse.concat(uppercaseLetters);
   }
 
-  const includeLowercase = confirm("Do you want to include lowercase characters? If yes, click 'Okay.'");
-  console.log(includeLowercase);
+  // CONFIRM if the password generator `includesSpecialCharacters`
+  const includesSpecialCharacters = confirm("Do you want to include special characters? If yes, click 'Okay.'");
+  console.log(includesSpecialCharacters);
 
-  if (includeLowercase == true) {
-    password.concat(lowercaseLetters);
-  }
-
-  else {
-    return;
-  }
-
-  const includeUppercase = confirm("Do you want to include uppercase characters? If yes, click 'Okay.'");
-  console.log(includeUppercase);
-
-  if (includeUppercase == true) {
-    password.concat(uppercaseLetters);
-  }
-
-  else {
-    return;
-  }
-
-  const includeSpecialCharacters = confirm("Do you want to include special characters? If yes, click 'Okay.'");
-  console.log(includeSpecialCharacters);
-
-  if (includeSpecialCharacters == true) {
-    password.concat(specialCharacters);
+  if (includesSpecialCharacters == true) {
+    charactersToUse.concat(specialCharacters);
   }
 
   else {
