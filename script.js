@@ -82,10 +82,11 @@ function generatePassword() {
 
   var randomIndex;
   var newCharacter;
+  var charactersNoCommas = charactersToUse.split(",");
   for (var i = 0; i < passwordLength; i++) {
     // SELECT `randomCharacter` from `charactersToUse`
-    randomIndex = Math.floor(Math.random() * charactersToUse.length);
-    newCharacter = charactersToUse[randomIndex];
+    randomIndex = Math.floor(Math.random() * charactersNoCommas.length);
+    newCharacter = charactersNoCommas[randomIndex];
     password += newCharacter;
 
     console.log(charactersToUse);
