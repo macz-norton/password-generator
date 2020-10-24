@@ -9,21 +9,13 @@
 // while( password.Length < passworkdLEngth ) {}
 
 
-// // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
 
-//   passwordText.value = password;
-
-// }
 
 
 
 // ${password}
 
-// // GIVEN I need a new, secure password
-// // WHEN I click the button to generate a password
+
 // // THEN I am presented with a series of prompts for password criteria
 // // WHEN prompted for password criteria
 // // THEN I select which criteria to include in the password
@@ -59,19 +51,27 @@ console.log(specialCharacters);
 var password = "";
 console.log(password);
 
-var writePassword = [];
+// WHEN I click the button to generate a password
+generateBtn.addEventListener("click", writePassword);
+
+// PASTE password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+}
 
 function generatePassword() {
+
 // PROMPT the user for a `passwordLength`
-  const passwordLength = parseInt(prompt("How many characters would you like your password to have?"));
+  const passwordLength = parseInt(prompt("Choose a password length between 8 and 128 characters."));
   console.log(passwordLength);
 
-  if (!(passwordLength >=8 && passwordLength <= 128)) {
+  if (!(passwordLength >=8 || passwordLength <= 128)) {
   // THEN ALERT to the user that they need to provide a correct length
-  alert("Please use a password length between 8 and 128 characters.")
+    alert("Please use a password length between 8 and 128 characters.")
   // EXIT function
   return;
+  }
 }
-}
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
