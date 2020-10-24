@@ -41,7 +41,7 @@ function generatePassword() {
   var password = "";
 
   // CONFIRM if the password generator `includesNumbers`
-  var includesNumbers = confirm("Do you want to include numbers? If yes, click 'Okay.'");
+  var includesNumbers = confirm("Do you want to include numbers? If yes, click 'OK.'");
 
   // IF 'okay', THEN add numbers to `charactersToUse`
   if ( includesNumbers == true ) {
@@ -49,7 +49,7 @@ function generatePassword() {
   }
 
   // CONFIRM if the password generator `includesLowercase`
-  var includesLowercase = confirm("Do you want to include lowercase characters? If yes, click 'Okay.'");
+  var includesLowercase = confirm("Do you want to include lowercase characters? If yes, click 'OK.'");
 
   // IF 'okay', THEN add lowercase letters to `charactersToUse`
   if ( includesLowercase == true ) {
@@ -57,7 +57,7 @@ function generatePassword() {
   }
 
   // CONFIRM if the password generator `includesUppercase`
-  var includesUppercase = confirm("Do you want to include uppercase characters? If yes, click 'Okay.'");
+  var includesUppercase = confirm("Do you want to include uppercase characters? If yes, click 'OK.'");
 
     // IF 'okay', THEN add uppercase letters to `charactersToUse`
   if ( includesUppercase == true ) {
@@ -65,7 +65,7 @@ function generatePassword() {
   }
 
   // CONFIRM if the password generator `includesSpecialCharacters`
-  var includesSpecialCharacters = confirm("Do you want to include special characters? If yes, click 'Okay.'");
+  var includesSpecialCharacters = confirm("Do you want to include special characters? If yes, click 'OK.'");
 
   // IF 'okay', THEN add special characters to `charactersToUse`
   if ( includesSpecialCharacters == true ) {
@@ -73,9 +73,9 @@ function generatePassword() {
   }
   
   // IF user selected no characters
-  if ( charactersToUse.length = 0 ) {
+  if ( includesNumbers == false && includesLowercase == false && includesUppercase == false && includesSpecialCharacters == false) {
     // THEN ALERT to the user that they need to select character
-    alert("Please select one or more types of characters.")
+    alert("To generate a pasword successfully, select one or more types of characters. Please try again.")
     // EXIT function
     return;
   }
@@ -94,5 +94,6 @@ function generatePassword() {
     console.log(newCharacter);
     console.log(password);
   }
+
     return password;
 }
