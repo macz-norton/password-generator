@@ -95,16 +95,14 @@ function generatePassword() {
     return;
   }
 
-  var newCharacter;
 
   // WHILE the `password.length` < `passwordLength`
   while( password.Length < passwordLength ) {
     // SELECT `randomCharacter` from `charactersToUse`
     var randomCharacter = charactersToUse[Math.floor(Math.random() * charactersToUse.length)];
     // APPEND `randomCharacter` to `password`
-    var newPassword = 
-    newCharacter = charactersToUse[randomCharacter];
-    newPassword.push(newCharacter);
+    var newCharacter = charactersToUse[randomCharacter];
+    password.push(newCharacter);
   }
   console.log(password);
   console.log(charactersToUse);
