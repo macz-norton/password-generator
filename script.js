@@ -74,4 +74,49 @@ function generatePassword() {
   // EXIT function
   return;
   }
+
+  const includeNumbers = confirm("Do you want to include numbers? If yes, click 'Okay.'");
+  console.log(includeNumbers);
+
+  if (includeNumbers == true) {
+    password.concat(numbers);
+  }
+
+  else {
+    return;
+  }
+
+  const includeLowercase = confirm("Do you want to include lowercase characters? If yes, click 'Okay.'");
+  console.log(includeLowercase);
+
+  if (includeLowercase == true) {
+    password.concat(lowercaseLetters);
+  }
+
+  else {
+    return;
+  }
+
+  const includeUppercase = confirm("Do you want to include uppercase characters? If yes, click 'Okay.'");
+  console.log(includeUppercase);
+
+  if (includeUppercase == true) {
+    password.concat(uppercaseLetters);
+  }
+
+  else {
+    return;
+  }
+
+  const includeSpecialCharacters = confirm("Do you want to include special characters? If yes, click 'Okay.'");
+  console.log(includeSpecialCharacters);
+
+  if (includeSpecialCharacters == true) {
+    password.concat(specialCharacters);
+  }
+
+  else {
+    return;
+  }
+
 }
