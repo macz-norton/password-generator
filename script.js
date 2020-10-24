@@ -50,17 +50,6 @@ var charactersToUse = [];
 var password = "";
 console.log(password);
 
-// WHEN I click the button to generate a password
-generateBtn.addEventListener("click", writePassword);
-
-// PASTE password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-}
-
 function generatePassword() {
 
 // PROMPT the user for a `passwordLength`
@@ -109,3 +98,14 @@ function generatePassword() {
   }
 
 }
+
+// PASTE password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+}
+
+// WHEN I click the button to generate a password
+generateBtn.addEventListener("click", writePassword);
