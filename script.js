@@ -95,16 +95,18 @@ function generatePassword() {
     return;
   }
 
-  var randomCharacter = "";
+  
+   console.log(passwordLength);  
+
+   var randomIndex = "";
+   var newCharacter = "";
   // WHILE the `password.length` < `passwordLength`
-  while( password.Length < passwordLength ) {
+  while ( password.length < passwordLength ) {
     // SELECT `randomCharacter` from `charactersToUse`
-    randomCharacter = charactersToUse[Math.floor(Math.random() * charactersToUse.length)];
-    // APPEND `randomCharacter` to `password`
-    var newCharacter = charactersToUse[randomCharacter];
-    password.concat(newCharacter);
+    randomIndex = Math.floor(Math.random() * charactersToUse.length);
+    newCharacter = charactersToUse[randomIndex];
+    // APPEND `newCharacter` to `password`
+    password += newCharacter;
   }
-  console.log(password);
-  console.log(charactersToUse);
   return password;
 }
