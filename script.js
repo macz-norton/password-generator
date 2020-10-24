@@ -19,7 +19,7 @@ var lowercaseLetters = "abcdefghijklmnopqrstuvwxyz".split("");
 // DECLARE a list of `uppercaseLetters`
 var uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 // // DECLARE a list of `specialCharacters`
-var specialCharacters = ["!","#","$","%","&","*","+","-",".","<",">","?","@","^","_","~"];
+var specialCharacters = "!#%&*+-.<>?@^_~".split("");
 
 function generatePassword() {
 
@@ -35,7 +35,7 @@ function generatePassword() {
   }
 
   // DECLARE a new list of `charactersToUse`
-  var charactersToUse = [""];
+  var charactersToUse = "";
 
   // DECLARE new `password` string 
   var password = "";
@@ -71,7 +71,7 @@ function generatePassword() {
   if ( includesSpecialCharacters == true ) {
     charactersToUse = charactersToUse.concat(specialCharacters);
   }
-
+  
   // IF user selected no characters
   if ( charactersToUse.length = 0 ) {
     // THEN ALERT to the user that they need to select character
