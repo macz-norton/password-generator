@@ -27,7 +27,7 @@ function generatePassword() {
   var passwordLength = parseInt(prompt("Choose a password length between 8 and 128 characters."));
 
   // IF password is out of length boundary of 8-128 characters
-  if ( !(passwordLength >=8 || passwordLength <= 128) ) {
+  if ( passwordLength<8 || passwordLength>128) ) {
     // THEN ALERT to the user that they need to provide a correct length
     alert("Please use a password length between 8 and 128 characters.")
     // EXIT function
