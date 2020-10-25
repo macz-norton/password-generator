@@ -21,7 +21,7 @@ This project requires no installations.
 
 The password generator can be run from a web browser: [https://macz-norton.github.io/password-generator/](https://macz-norton.github.io/password-generator/)
 
-![Password Generator at work](https://share.getcloudapp.com/QwukdEqB)[]
+![Password Generator at work](https://share.getcloudapp.com/QwukdEqB)
 
 ## Tests
 
