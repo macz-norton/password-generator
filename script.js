@@ -35,7 +35,7 @@ function generatePassword() {
   }
 
   // DECLARE a new list of `charactersToUse`
-  var charactersToUse = "";
+  var charactersToUse = [];
 
   // DECLARE new `password` string 
   var password = "";
@@ -82,11 +82,10 @@ function generatePassword() {
 
   var randomIndex;
   var newCharacter;
-  var charactersNoCommas = charactersToUse.split(",");
   for (var i = 0; i < passwordLength; i++) {
     // SELECT `randomCharacter` from `charactersToUse`
-    randomIndex = Math.floor(Math.random() * charactersNoCommas.length);
-    newCharacter = charactersNoCommas[randomIndex];
+    randomIndex = Math.floor(Math.random() * charactersToUse.length);
+    newCharacter = charactersToUse[randomIndex];
     password += newCharacter;
 
     console.log(charactersToUse);
